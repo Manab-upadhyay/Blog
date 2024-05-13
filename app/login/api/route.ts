@@ -1,5 +1,5 @@
 import connectDB from "../../db/page";
-import { HttpStatusCode } from 'axios';
+
 import User from "../../models/user"
 import { NextRequest, NextResponse } from 'next/server';
 
