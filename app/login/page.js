@@ -43,7 +43,7 @@ if(e.target.name=='email'){
   if(!token){
   const data= {email,password};
   try {
-    const response = await fetch("http://localhost:3000/login/api", {
+    const response = await fetch("/login/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

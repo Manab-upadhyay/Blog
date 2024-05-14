@@ -9,7 +9,7 @@ export async function POST(req:NextRequest){
     try {
         await connectDB();
         let body= await req.json()
-        console.log(body)
+     
         let user=new Users({
             Name:body.fname+" "+ body.lname,
             Email:body.email,

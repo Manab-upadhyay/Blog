@@ -56,7 +56,7 @@ useEffect(()=>{
       const data = { title, post, image, postid, name, userid };
 
       try {
-        const response = await fetch("http://localhost:3000/posts", {
+        const response = await fetch("https://blog-vlla-pbm2f14mh-manab-upadhyays-projects.vercel.app/posts", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

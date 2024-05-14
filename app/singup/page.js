@@ -38,7 +38,7 @@ if(e.target.name=='password'){
   e.preventDefault();
   const data= {fname,lname,email,password};
   try {
-    const response = await fetch("http://localhost:3000/singup/api", {
+    const response = await fetch("/singup/api", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
