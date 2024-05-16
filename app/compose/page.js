@@ -49,7 +49,7 @@ useEffect(()=>{
 
  
       const decodedToken = jwt.decode(token);
-      console.log("token is>>>>", decodedToken);
+     
       const name = decodedToken.name;
       const userid = decodedToken.email;
       const postid = Math.floor(Math.random() * 100000);
@@ -58,9 +58,7 @@ useEffect(()=>{
       try {
         const response = await fetch("/posts", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+          
           body: JSON.stringify(data),
         });
 
