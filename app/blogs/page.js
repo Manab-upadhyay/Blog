@@ -23,7 +23,7 @@ export default function TracingBeamDemo() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/posts/api');
+        const response = await fetch('/posts/api');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }
