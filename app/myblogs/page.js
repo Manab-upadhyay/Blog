@@ -62,7 +62,7 @@ const[sing, setsing]= useState(false)
 
     const posts= {postid}
         try {
-            const data = await fetch("http://localhost:3000/delete", {
+            const data = await fetch("/delete", {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
