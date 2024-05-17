@@ -19,7 +19,7 @@ export async function POST(req:NextRequest){
 
         })
         await user.save()
-        var token = jwt.sign({ email: body.email, name: body.fame+body.lname }, 'secret_key', { expiresIn: '1h' });
+        var token = jwt.sign({ email: body.email, name: body.fname+body.lname }, 'secret_key', { expiresIn: '1h' });
         return Response.json({message:"Success", token:token})
         
     } catch (error) {
