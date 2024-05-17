@@ -69,7 +69,7 @@ const[sing, setsing]= useState(false)
                 },
                 body: JSON.stringify(posts),
               });
-              window.location.reload()
+            
             if (!data.ok) {
               throw new Error('Failed to fetch data');
             }

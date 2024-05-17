@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb://manab123:qwerty123@ac-neq9zbn-shard-00-00.hphb4ra.mongodb.net:27017,ac-neq9zbn-shard-00-01.hphb4ra.mongodb.net:27017,ac-neq9zbn-shard-00-02.hphb4ra.mongodb.net:27017/?ssl=true&replicaSet=atlas-eihh8b-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0', {
+    await mongoose.connect('mongodb+srv://manab123:qwerty123@cluster0.hphb4ra.mongodb.net/', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
