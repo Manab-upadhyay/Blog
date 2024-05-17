@@ -38,7 +38,7 @@ export default function TracingBeamDemo() {
     fetchData();
   }, []);
   const filteredPosts = post?.filter((item) =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase())
+    item?.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
   const renderContent = (content) => {
     const paragraphs = content.split('\n');
