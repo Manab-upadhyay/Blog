@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
   try {
-    await mongoose.connect('mongodb+srv://manabupadhyay123:manesha123@cluster0.1udishj.mongodb.net/', {
+    await mongoose.connect('mongodb+srv://manab123:qwerty123@cluster0.hphb4ra.mongodb.net/', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
