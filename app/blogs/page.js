@@ -65,10 +65,10 @@ export default function TracingBeamDemo() {
         />
         {!searchTerm&&post?.map((item, index) => (
           <div key={index} className="mb-10 my-5">
-            <Avatar sx={{ bgcolor: deepOrange[500] }}>{item.name.charAt(0)}</Avatar>
-            <h1>Post By: {item.name}</h1>
+            <Avatar sx={{ bgcolor: deepOrange[500] }}>{item?.name.charAt(0)}</Avatar>
+            <h1>Post By: {item?.name}</h1>
             <p className={twMerge(calsans.className, "text-xl mb-4")}>
-              {item.title}
+              {item?.title}
             </p>
             <div className="text-sm prose prose-sm dark:prose-invert">
               <img
