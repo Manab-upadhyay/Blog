@@ -7,8 +7,8 @@ export async function GET() {
     await connectDB();
     console.log('Database connection established');
     let posts = await Posts.find();
-    console.log('Posts fetched:', posts);
-    return Response.json({posts})
+
+    return NextResponse.json(posts);
   } catch (error) {
     console.error('Error fetching posts:', error);
     return NextResponse.json({ error: 'Failed to fetch posts' }, { status: 500 });
