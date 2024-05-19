@@ -1,6 +1,6 @@
 import Posts from "../../models/post";
-import connectDB from "../../db/page";
-import Posts from '../../models/post';
+
+
 import connectDB from '../../db/page';
 import { NextResponse } from 'next/server';
 
