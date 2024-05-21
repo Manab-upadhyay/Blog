@@ -8,6 +8,8 @@ import { TracingBeam } from "../componets/blogui";
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Avatar from '@mui/material/Avatar';
+import { Router } from "express";
+
 
 const jwt= require('jsonwebtoken')
 
@@ -70,8 +72,8 @@ const[sing, setsing]= useState(false)
                 body: JSON.stringify(posts),
               });
             
-            if (!data.ok) {
-              throw new Error('Failed to fetch data');
+            if (data.ok) {
+            window.location.reload()
             }
             
           } catch (error) {
