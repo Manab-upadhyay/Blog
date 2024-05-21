@@ -1,13 +1,14 @@
 import Posts from "../models/post"
 import connectDB from "../db/page"
-import { NextRequest } from "next/server";
+import { NextRequest,NextResponse } from "next/server";
+
 
 export async function POST(req:NextRequest){
 try {
     await connectDB();
     let body= await req.json()
     
-    console.log(body)
+  
     let posts= new Posts({
         postid:body.postid,
         userid: body.userid,
@@ -24,3 +25,15 @@ image: body.image
 }
 
 }
+export async function GET() {
+    try {
+      await connectDB();
+      console.log('Database connection established');
+      let posts = await Posts.find();
+  
+      return NextResponse.json(posts);
+    } catch (error) {
+      console.error('Error fetching posts:', error);
+      return NextResponse.json({ error: 'Failed to fetch posts' }, { status: 500 });
+    }
+  }
