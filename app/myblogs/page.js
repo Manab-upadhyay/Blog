@@ -32,7 +32,7 @@ const[sing, setsing]= useState(false)
     
 
       try {
-        const response = await fetch('/posts/api');
+        const response = await fetch('/posts');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }
