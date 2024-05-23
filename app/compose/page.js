@@ -58,7 +58,9 @@ useEffect(()=>{
       try {
         const response = await fetch("/posts", {
           method: "POST",
-         
+          headers: {
+            "Content-Type": "application/json",
+          },
           body: JSON.stringify(data),
         });
 
@@ -110,7 +112,7 @@ useEffect(()=>{
           <label htmlFor="image" className="text-sm text-black font-bold">
             Upload Image
           </label>
-          <input type="file" accept="image/*" onChange={handleImageChange} />
+          <input type="file" name="profile-file" required onChange={handleImageChange}/>
         </div>
         <div className="mx-2.5 my-32 items-center">
         <button  onClick={handlePost} class="px-8 py-2 rounded-md bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-teal-500" disabled={!disable}>Compose it</button>
