@@ -31,6 +31,10 @@ useEffect(()=>{
   function handleImageChange(e) {
     const file = e.target.files[0];
     if (file) {
+      if (file.size > 5 * 1024 * 1024) { // 5MB limit
+        toast.error("File size exceeds 5MB. Please upload a smaller image.");
+        return;
+      }
       const reader = new FileReader();
       reader.onload = () => {
         setImage(reader.result); // Set the image URL to be displayed
