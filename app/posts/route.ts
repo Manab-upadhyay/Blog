@@ -7,7 +7,7 @@ export async function POST(req:NextRequest){
 try {
     await connectDB();
     let body= await req.json()
-    
+    console.log("inside the post req",body)
   
     let posts= new Posts({
         postid:body.postid,
@@ -17,6 +17,7 @@ try {
 content: body.post,
 image: body.image
     })
+    console.log("after saving")
     await posts.save()
     return Response.json({message:'Success'})
     
