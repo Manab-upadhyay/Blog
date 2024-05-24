@@ -57,7 +57,7 @@ export default function TracingBeamDemo() {
   };
 
   return (
-    <TracingBeam className="px-6 my-28 md:w-full w-72">
+    <TracingBeam className="px-6 my-28 w-full ">
       <div className="max-w-2xl mx-auto antialiased pt-4 relative">
       <input
           type="text"
