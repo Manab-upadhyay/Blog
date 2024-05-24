@@ -84,7 +84,7 @@ export default function TracingBeamDemo() {
               {expandedIndex === index ? (
                 <div key={index}>{renderContent(item.content)}</div>
               ) : (
-                <div key={index}>{renderContent(item.content.slice(0, 1000))}</div>
+                <div key={index}>{renderContent(item.content.slice(0, 300))}</div>
               )}
               {expandedIndex !== index && (
                 <p

@@ -12,7 +12,7 @@ export default function Compose() {
   const [disable, setDisable] = useState(false);
   const router = useRouter();
 useEffect(()=>{
-  if (title.length >= 5 && post.length >= 5) {
+  if (title.length >= 5 && post.length >= 300) {
     setDisable(true);
   } else {
     setDisable(false);
@@ -122,7 +122,7 @@ useEffect(()=>{
         <button  onClick={handlePost} class="px-8 py-2 rounded-md bg-teal-500 text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-teal-500" disabled={!disable}>Compose it</button>
       
      
-          {!disable&&<div className="text-red-500">Enter the tittle and contenet  ,and content must have min 500 words!</div>}
+          {!disable&&<div className="text-red-500">Enter the tittle and contenet  ,and content must have min 300 words!</div>}
         </div>
       </div>
     </>
