@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 const calsans = require('cal-sans');
-import Image from "next/image";
+
 import { twMerge } from "tailwind-merge";
 import { TracingBeam } from "../componets/blogui";
 import Button from '@mui/material/Button';
